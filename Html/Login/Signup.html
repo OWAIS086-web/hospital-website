@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background: url(../../Pictures/12.jpeg);
+        background-size: cover;
+        background-position: unset;
+        font-family: sans-serif;
+
+    }
+    .loginbox{
+        width: 440px;
+        height:720px;
+        background: black;
+        color: #fff;
+        top: 65%;
+        left: 50% ;
+        position: absolute;
+        transform: translate(-50% ,-50%);
+        box-sizing: border-box;
+        padding:90px 30px;
+        border:solid;
+    }
+    .ava{
+            width: 120px;
+            height: 110px;
+            border-radius: 60%;
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 50px);
+        }
+        h1{
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+        .loginbox p{
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        .loginbox input{
+            width: 100%;
+          margin-bottom: 20px ;
+        }
+        .loginbox button{
+            width: 100%;
+          margin-bottom: 20px ;
+        }
+        .loginbox input[type="text"] ,input[type="Password"],input[type="email"],input[type="number"]
+        {
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 16px ;
+        }
+        .loginbox select{
+
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 16px ;
+
+
+        }
+        .loginbox button[type="submit"]
+        {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #46bae2;
+            color: #fff;
+            font-size: 18px;
+            border-radius:20px;
+        }
+        .loginbox button[type="submit"]:hover
+        {
+            cursor: pointer;
+        background: #fb2525;
+        color: #fff;
+        }
+        .loginbox a{
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 20px;
+            color: darkgray;
+        }
+        .loginbox a:hover
+        {
+            color: #ffc107;
+            
+        }
+</style>
+</head>
+<body>
+    <div class="loginbox">
+        <img src="../../Pictures/Register.png" class="ava">
+        <h1> SignUp Here</h1>
+        <form action="Test.php" method="POST">
+
+        
+            <p> User Name</p>
+            <input type="text" name="username" , placeholder="Enter user name" required>
+            <p> Father Name</p>
+            <input type="text" name="fathername" , placeholder="Enter Father name" required>
+            <p>Email</p>
+            <input type="email" name="email" , placeholder="Enter Email" required>
+            <p>Phone Number</p>
+            <input type="text" name="number" , placeholder="Enter Number" required>
+            <p> Password </p>
+            <input type="password" name="password" , minlength="6" placeholder="Enter password" id="pass" required >
+            <p>Confirm Password </p>
+            <input type="password" name="confirmpassword" , placeholder="Enter password" id="c_pass" required>
+            
+
+            <button type="submit" name="" value="SignUp"> SignUp </button>
+            <a href="Login.php" ,> Already Have an Account </a> <br/>
+            
+    
+        </form>
+    </div>
+<script>
+var  firstpass = document.getElementById("pass")
+  , sndpass = document.getElementById("c_pass");
+
+function validatePassword(){
+  if(firstpass.value != sndpass.value) {
+    sndpass.setCustomValidity("Passwords Don't Match");
+  } else {
+    sndpass.setCustomValidity('');
+  }
+}
+
+firstpass.onchange = validatePassword;
+sndpass.onkeyup = validatePassword;
+</script>
+
+ 
+</body>
+</html>

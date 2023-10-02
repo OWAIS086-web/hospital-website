@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>D&R</title>
+<style>
+  html {
+  scroll-behavior: smooth;
+}
+	.parallax {
+  /* The image used */
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)) , url("../../Pictures/13977.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: unset;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-block-end:solid;
+  
+}
+
+h1 { color: rgb(0, 16, 87); font-size: 50px;
+}
+
+
+* {box-sizing: border-box;}
+
+body { 
+  background-color:lightgray;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+.header {
+  overflow: hidden;
+  background-color: rgb(10, 96, 153);
+  padding: 20px 10px;
+}
+
+.header a, button {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo, button.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover,button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active ,button.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a ,button {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+
+.vc_custom_1538728755633 {
+    background-color: #2272ad !important;
+}
+
+/* CSS for Contact */
+#contact-us {
+  background-color: #fff;
+  text-align: left;
+  padding-bottom: 100px;
+}
+
+#contact-us .section-heading {
+  color: #121212;
+}
+
+
+#contact-us .pop-button {
+  margin-top: 30px;
+}
+
+#contact input {
+  border-radius: 0px;
+  padding-left: 15px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #7a7a7a;
+  background-color: rgba(0, 0, 0, 0.03);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  line-height: 50px;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#contact textarea {
+  border-radius: 0px;
+  padding-left: 15px;
+  padding-top: 10px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #232323;
+  background-color: rgba(0, 0, 0, 0.03);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  height: 165px;
+  max-height: 220px;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+
+#contact button {
+    padding: 13px 20px;
+  letter-spacing: 0.5px;
+  background-color: #46bae2;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0px;
+}
+
+
+/* The footer is fixed to the bottom of the page */
+er{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:600px){
+	footer { position: static; }
+	header { padding-top:30px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 0px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+ter-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+/* The Modal (background) */
+.modal {
+	display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 4% auto 15% auto;
+    border: 1px solid #888;
+    width: 40%; 
+	padding-bottom: 30px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    animation: zoom 0.6s
+}
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 570px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  max-height: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+</style>
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+<div class="header">
+
+ <img src="../../Pictures/download1.jpg" class="logo" width="90" height="70"></a>
+  <div class="header-right" class="navbar-nav">
+	<a class="active" href="#home">Home</a>
+	<a class="nav-link" href="#Services">Our services</a>
+  <a class="nav-link" href="#fix">Doctor's</a>
+  <a href="AdminAccount.html">Admin Account</a>
+    <a class="nav-link" href="#contact-us">Contact</a>
+	<a class="nav-link" href="#about">About</a>
+	<a class="nav-link" href="../../Home.html"> Log Out</a>
+  </div>
+</div>
+
+<div style="padding-left:10px background = none"  >
+  
+</div>
+<div class="parallax">
+	<h1>Diagnostic and Remedy</h1>
+</div>
+
+<div style="height:0%;font-size:36px; ">
+<!--Scroll Up and Down this page to see the parallax scrolling effect.
+This div is just here to enable scrolling.
+Tip: Try to remove the background-attachment property to remove the scrolling effect.-->
+</div>
+
+<!-- Services. -->
+<div id="Services" class="Services-box">
+  <h2 style="font-size: 35px;margin-bottom: 0%; color: #ffffff;text-align: center" class="vc_custom_heading vc_custom_1538728755633">Our Services</h2>
+  </div>
+  <h3>Services Covered</h3>
+  <ul><li>accommodation and meals at the standard ward care</li>
+    <li>nursing services, when provided by the hospital</li>
+    <li>laboratory, X-ray and diagnostic procedures, and interpretation</li>
+    <li>drugs prescribed by a physician and administered in the hospital</li>
+    <li>use of the operating room, case room, and anaesthetic facilities required for diagnosis and treatment, including necessary equipment and supplies</li>
+    <li>radiotherapy treatment, occupational therapy, and physiotherapy&nbsp;when provided by an insured facility</li>
+    <li>detoxification services in an approved health facility</li>
+    </ul>
+    <p>Other limitations and restrictions may apply.&nbsp;&nbsp;</p>
+    <h3>Services Not Covered</h3>
+    <ul><li>hospital charges above the standard ward rate for private or semi-private accommodation</li>
+      <li>services that are not medically required, such as cosmetic surgery</li>
+      <li>services that are considered experimental</li>
+      <li>ambulance charges (except inter-hospital transfers)</li>
+      <li>dental services, other than specific procedures related to jaw injury or disease</li>
+      <li>alcohol and drug rehabilitation, unless prior approved</li>
+      </ul>
+      <p>If you are not sure what is covered, or need more information, please contact&nbsp;Health Services Administration.</p>
+  
+  
+  <!-- Services End. -->
+  <div id="fix" class="Services-box">
+  
+  <h2 style="font-size: 35px;margin-bottom: 0%; color: #ffffff;text-align: center" class="vc_custom_heading vc_custom_1538728755633">Doctor's</h2>
+  </div>
+  <div class="row">
+    <div class="column" >
+      
+      <div class="card">
+    <img src="../../dr1.jpg" alt="John" style="width:100%" height="200">
+    <h1>Dr Owais</h1>
+    <p class="title">MBBS From JSMU</p>
+    <p>Spacilist in ENT</p>
+    <p>Avalibale at 5 to 6</p>
+    <div style="margin: 24px 0;">
+      <a href="#"><i class="fa fa-dribbble"></i></a> 
+      <a href="#"><i class="fa fa-twitter"></i></a>  
+      <a href="#"><i class="fa fa-linkedin"></i></a>  
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+    <p><button>Contact</button></p>
+  </div>
+    </div>
+    <div class="column" >
+      <div class="card">
+    <img src="../../dr2.jpg" alt="John" style="width:100%" height="200">
+    <h1>Dr Awais</h1>
+    <p class="title">MBBS From JSMU</p>
+    <p>Spacilist in ENT</p>
+    <p>Avalibale at 5 to 6</p>
+    <div style="margin: 24px 0;">
+      <a href="#"><i class="fa fa-dribbble"></i></a> 
+      <a href="#"><i class="fa fa-twitter"></i></a>  
+      <a href="#"><i class="fa fa-linkedin"></i></a>  
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+    <p><button>Contact</button></p>
+  </div>  </div>
+    <div class="column" >
+      <div class="card">
+    <img src="../../dr3.jpg" alt="John" style="width:100%" height="200">
+    <h1>Dr Danish</h1>
+    <p class="title">MBBS From JSMU</p>
+    <p>Spacilist in ENT</p>
+    <p>Avalibale at 5 to 6</p>
+    <div style="margin: 24px 0;">
+      <a href="#"><i class="fa fa-dribbble"></i></a> 
+      <a href="#"><i class="fa fa-twitter"></i></a>  
+      <a href="#"><i class="fa fa-linkedin"></i></a>  
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+    <p><button>Contact</button></p>
+  </div>  </div>
+  </div>
+  
+<!-- Services End. -->
+
+
+<!-- Contact Start. -->
+
+
+<section id="contact-us">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-heading">
+<h2 style="font-size: 35px;color: #ffffff;text-align: center" class="vc_custom_heading vc_custom_1538728755633">Contact Us</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form id="contact" action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                  <fieldset>
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Name..." required>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                  <fieldset>
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="Email..." required>
+                                  </fieldset>
+                                </div>
+                                 <div class="col-md-6">
+                                  <fieldset>
+                                    <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                  <fieldset>
+                                    <input name="phone" type="phone" class="form-control" id="phone" placeholder="Phone..." required>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message..." required></textarea>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <button type="submit" id="form-submit" class="btn">Send your message</button>
+                                  </fieldset>
+                                </div>
+                            </div>
+                        </form>
+					</div>
+					<div class="col-md-6">
+                        <div id="map">
+	<!-- How to change your own map point
+            1. Go to Google Maps
+            2. Click on your location point
+            3. Click "Share" and choose "Embed map" tab
+            4. Copy only URL and paste it within the src="" field below
+	-->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d924244.0632922247!2d66.594949068185!3d25.19214635187257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e03e02fabc1%3A0x96c129db3ee25a57!2sSindh%20Madressatul%20Islam%20University!5e0!3m2!1sen!2s!4v1574094914096!5m2!1sen!2s" width="100%" height="395" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+<!-- The content of your page would go here. -->
+
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+		<img src="../../Pictures/download1.jpg" height="50px" width="50px">
+		<div id="about" class="Services-box">
+	  <h3>About<span>D&R</span></h3>
+	</div>
+
+      <p class="footer-links">
+        <a href="#">Home</a>
+        |
+        <a href="#">About</a>
+        |
+		<a href="#contact-us">Contact</a>
+		|
+		<a href="html/Login/Login.php">Login</a>
+		|
+		<a href="html/Login/Signup.php">Sign up</a>
+      </p>
+
+      <p class="footer-company-name">© 2019 Diagnostic and Remedy Pvt. Ltd.</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>ii chundrigar road </span>
+            SMIU , karachi - 00000 </p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+21-111222333</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@XYZ.com">support@XYZ.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+                      <span>About the D&R</span>
+                      Diagnostic Services. Diagnostic Services facilitates the provision of timely, cost-effective, and high quality diagnostic care in safe and secure environments. It includes the clinical services of Pathology and Laboratory Medicine, Radiology, and Nuclear Medicine.</p>
+                  <div class="footer-icons">
+                      <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-youtube"></i></a>
+                  </div>
+              </div>
+      </footer>
+      
+      
+
+		  <script>(function(){var defaultOptions={frameRate:150,animationTime:400,stepSize:120,pulseAlgorithm:true,pulseScale:8,pulseNormalize:1,accelerationDelta:20,accelerationMax:1,keyboardSupport:true,arrowScroll:50,touchpadSupport:true,fixedBackground:true,excluded:""};var options=defaultOptions;var isExcluded=false;var isFrame=false;var direction={x:0,y:0};var initDone=false;var root=document.documentElement;var activeElement;var observer;var deltaBuffer=[120,120,120];var key={left:37,up:38,right:39,down:40,spacebar:32,pageup:33,pagedown:34,end:35,home:36};var options=defaultOptions;options.frameRate=150;options.animationTime=1800;options.stepSize=85;function initTest(){var disableKeyboard=false;if(disableKeyboard){removeEvent("keydown",keydown);}
+			if(options.keyboardSupport&&!disableKeyboard){addEvent("keydown",keydown);}}
+			function init(){if(!document.body)return;var body=document.body;var html=document.documentElement;var windowHeight=window.innerHeight;var scrollHeight=body.scrollHeight;root=(document.compatMode.indexOf('CSS')>=0)?html:body;activeElement=body;initTest();initDone=true;if(top!=self){isFrame=true;}
+			else if(scrollHeight>windowHeight&&(body.offsetHeight<=windowHeight||html.offsetHeight<=windowHeight)){var pending=false;var refresh=function(){if(!pending&&html.scrollHeight!=document.height){pending=true;setTimeout(function(){html.style.height=document.height+'px';pending=false;},500);}};html.style.height='auto';setTimeout(refresh,10);if(root.offsetHeight<=windowHeight){var underlay=document.createElement("div");underlay.style.clear="both";body.appendChild(underlay);}}
+			if(!options.fixedBackground&&!isExcluded){body.style.backgroundAttachment="scroll";html.style.backgroundAttachment="scroll";}}
+			var que=[];var pending=false;var lastScroll=+new Date;function scrollArray(elem,left,top,delay){delay||(delay=1000);directionCheck(left,top);if(options.accelerationMax!=1){var now=+new Date;var elapsed=now- lastScroll;if(elapsed<options.accelerationDelta){var factor=(1+(30/elapsed))/ 2;
+			if(factor>1){factor=Math.min(factor,options.accelerationMax);left*=factor;top*=factor;}}
+			lastScroll=+new Date;}
+			que.push({x:left,y:top,lastX:(left<0)?0.99:-0.99,lastY:(top<0)?0.99:-0.99,start:+new Date});if(pending){return;}
+			var scrollWindow=(elem===document.body);var step=function(time){var now=+new Date;var scrollX=0;var scrollY=0;for(var i=0;i<que.length;i++){var item=que[i];var elapsed=now- item.start;var finished=(elapsed>=options.animationTime);var position=(finished)?1:elapsed/options.animationTime;if(options.pulseAlgorithm){position=pulse(position);}
+			var x=(item.x*position- item.lastX)>>0;var y=(item.y*position- item.lastY)>>0;scrollX+=x;scrollY+=y;item.lastX+=x;item.lastY+=y;if(finished){que.splice(i,1);i--;}}
+			if(scrollWindow){window.scrollBy(scrollX,scrollY);}
+			else{if(scrollX)elem.scrollLeft+=scrollX;if(scrollY)elem.scrollTop+=scrollY;}
+			if(!left&&!top){que=[];}
+			if(que.length){requestFrame(step,elem,(delay/options.frameRate+ 1));}else{pending=false;}};requestFrame(step,elem,0);pending=true;}
+			function wheel(event){if(!initDone){init();}
+			var target=event.target;var overflowing=overflowingAncestor(target);if(!overflowing||event.defaultPrevented||isNodeName(activeElement,"embed")||(isNodeName(target,"embed")&&/\.pdf/i.test(target.src))){return true;}
+			var deltaX=event.wheelDeltaX||0;var deltaY=event.wheelDeltaY||0;if(!deltaX&&!deltaY){deltaY=event.wheelDelta||0;}
+			if(!options.touchpadSupport&&isTouchpad(deltaY)){return true;}
+			if(Math.abs(deltaX)>1.2){deltaX*=options.stepSize/120;}
+			if(Math.abs(deltaY)>1.2){deltaY*=options.stepSize/120;}
+			scrollArray(overflowing,-deltaX,-deltaY);event.preventDefault();}
+			function keydown(event){var target=event.target;var modifier=event.ctrlKey||event.altKey||event.metaKey||(event.shiftKey&&event.keyCode!==key.spacebar);if(/input|textarea|select|embed/i.test(target.nodeName)||target.isContentEditable||event.defaultPrevented||modifier){return true;}
+			if(isNodeName(target,"button")&&event.keyCode===key.spacebar){return true;}
+			var shift,x=0,y=0;var elem=overflowingAncestor(activeElement);var clientHeight=elem.clientHeight;if(elem==document.body){clientHeight=window.innerHeight;}
+			switch(event.keyCode){case key.up:y=-options.arrowScroll;break;case key.down:y=options.arrowScroll;break;case key.spacebar:shift=event.shiftKey?1:-1;y=-shift*clientHeight*0.9;break;case key.pageup:y=-clientHeight*0.9;break;case key.pagedown:y=clientHeight*0.9;break;case key.home:y=-elem.scrollTop;break;case key.end:var damt=elem.scrollHeight- elem.scrollTop- clientHeight;y=(damt>0)?damt+ 10:0;break;case key.left:x=-options.arrowScroll;break;case key.right:x=options.arrowScroll;break;default:return true;}
+			scrollArray(elem,x,y);event.preventDefault();}
+			function mousedown(event){activeElement=event.target;}
+			var cache={};setInterval(function(){cache={};},10*1000);var uniqueID=(function(){var i=0;return function(el){return el.uniqueID||(el.uniqueID=i++);};})();function setCache(elems,overflowing){for(var i=elems.length;i--;)
+			cache[uniqueID(elems[i])]=overflowing;return overflowing;}
+			function overflowingAncestor(el){var elems=[];var rootScrollHeight=root.scrollHeight;do{var cached=cache[uniqueID(el)];if(cached){return setCache(elems,cached);}
+			elems.push(el);if(rootScrollHeight===el.scrollHeight){if(!isFrame||root.clientHeight+ 10<rootScrollHeight){return setCache(elems,document.body);}}else if(el.clientHeight+ 10<el.scrollHeight){overflow=getComputedStyle(el,"").getPropertyValue("overflow-y");if(overflow==="scroll"||overflow==="auto"){return setCache(elems,el);}}}while(el=el.parentNode);}
+			function addEvent(type,fn,bubble){window.addEventListener(type,fn,(bubble||false));}
+			function removeEvent(type,fn,bubble){window.removeEventListener(type,fn,(bubble||false));}
+			function isNodeName(el,tag){return(el.nodeName||"").toLowerCase()===tag.toLowerCase();}
+			function directionCheck(x,y){x=(x>0)?1:-1;y=(y>0)?1:-1;if(direction.x!==x||direction.y!==y){direction.x=x;direction.y=y;que=[];lastScroll=0;}}
+			var deltaBufferTimer;function isTouchpad(deltaY){if(!deltaY)return;deltaY=Math.abs(deltaY)
+			deltaBuffer.push(deltaY);deltaBuffer.shift();clearTimeout(deltaBufferTimer);var allDivisable=(isDivisible(deltaBuffer[0],120)&&isDivisible(deltaBuffer[1],120)&&isDivisible(deltaBuffer[2],120));return!allDivisable;}
+			function isDivisible(n,divisor){return(Math.floor(n/divisor)==n/divisor);}
+			var requestFrame=(function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||function(callback,element,delay){window.setTimeout(callback,delay||(1000/60));};})();function pulse_(x){var val,start,expx;x=x*options.pulseScale;if(x<1){val=x-(1- Math.exp(-x));}else{start=Math.exp(-1);x-=1;expx=1- Math.exp(-x);val=start+(expx*(1- start));}
+			return val*options.pulseNormalize;}
+			function pulse(x){if(x>=1)return 1;if(x<=0)return 0;if(options.pulseNormalize==1){options.pulseNormalize/=pulse_(1);}
+			return pulse_(x);}
+			var isChrome=/chrome/i.test(window.navigator.userAgent);var wheelEvent=null;if("onwheel"in document.createElement("div"))
+			wheelEvent="wheel";else if("onmousewheel"in document.createElement("div"))
+			wheelEvent="mousewheel";if(wheelEvent&&isChrome){addEvent(wheelEvent,wheel);addEvent("mousedown",mousedown);addEvent("load",init);}})();</script>
+
+
+
+</body>
+</html>
